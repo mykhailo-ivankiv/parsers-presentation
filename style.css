@@ -62,3 +62,21 @@ img {
 img {
   display: block;
 }
+
+.DFA-test {
+  display: block;
+}
+.DFA-test__input {
+  font-family: "PT Mono", monospace;
+  font-size: 1rem;
+  border: none;
+  border-bottom: 1px solid #ccc;
+  padding: 0;
+  margin: 0;
+}
+.DFA-test__error {
+  font-family: "PT Mono", monospace;
+  font-size: 1rem;
+  display: block;
+  color: red;
+}
