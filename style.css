@@ -80,3 +80,13 @@ img {
   display: block;
   color: red;
 }
+
+.code-label {
+    position: absolute;
+    padding: 0.5rem;
+    font-size: 1rem;
+    background: #f5b111;
+    border-radius: 3px;
+    right: 5rem;
+
+}

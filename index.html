@@ -7,301 +7,319 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
     <link rel="stylesheet" href="style.css">
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=TeX-MML-AM_CHTML'
+            async></script>
 </head>
 <body>
-    <section>
-        <h1>
-            Як перестати мучитись і почати жити. Або чому я ненавиджу <span style=" text-decoration: line-through;">менеджерів</span> реальність.
-        </h1>
-    </section>
+<section>
+    <h1>
+        Як перестати мучитись і почати жити. Або чому я ненавиджу <span style=" text-decoration: line-through;">менеджерів</span>
+        реальність.
+    </h1>
+</section>
 
-    <section>
-        <h2>Одного разу мені довірили реалізувати форму реєстрації.</h2>
+<section>
+    <h2>Одного разу мені довірили реалізувати форму реєстрації.</h2>
 
-        <form class="example-form" action="">
-            <label>
-                <span class="example-form__label">Email:</span>
-                <input type="email" placeholder="mivankiv@developer.com"/><br/>
-            </label>
-            <label >
-                <span class="example-form__label">Password:</span>
-                <input type="password" placeholder="'asdfg' is the best password ever"/><br/>
-            </label>
+    <form class="example-form" action="">
+        <label>
+            <span class="example-form__label">Email:</span>
+            <input type="email" placeholder="mivankiv@developer.com"/><br/>
+        </label>
+        <label>
+            <span class="example-form__label">Password:</span>
+            <input type="password" placeholder="'asdfg' is the best password ever"/><br/>
+        </label>
 
-            <button class="example-form__hero-button">Just do it!</button>
-        </form>
-    </section>
+        <button class="example-form__hero-button">Just do it!</button>
+    </form>
+</section>
 
-    <section>
-        <h2>Одного разу мені довірили реалізувати форму реєстрації.</h2>
+<section>
+    <h2>Одного разу мені довірили реалізувати форму реєстрації.</h2>
 
-        <form class="example-form" action="">
-            <label>
-                <span class="example-form__label">Email:</span>
-                <input type="email" placeholder="mivankiv@developer.com"/><br/>
-            </label>
-            <button class="example-form__hero-button">Just do it!</button>
-        </form>
-    </section>
+    <form class="example-form" action="">
+        <label>
+            <span class="example-form__label">Email:</span>
+            <input type="email" placeholder="mivankiv@developer.com"/><br/>
+        </label>
+        <button class="example-form__hero-button">Just do it!</button>
+    </form>
+</section>
 
-    <section>
-        <form class="example-form" action="">
-            <label>
-                <span class="example-form__label">Email:</span>
-                <input type="email" required placeholder="mivankiv@developer.com"/>
-            </label>
-            <button class="example-form__hero-button">Just do it!</button>
-        </form>
+<section>
+    <form class="example-form" action="">
+        <label>
+            <span class="example-form__label">Email:</span>
+            <input type="email" required placeholder="mivankiv@developer.com"/>
+        </label>
+        <button class="example-form__hero-button">Just do it!</button>
+    </form>
 
-        <code>
+    <code>
             <pre>
                 &lt;input type="text" placeholder="mivankiv@developer.com"/>
             </pre>
-        </code>
-    </section>
+    </code>
+</section>
 
-    <section>
-        <h2>Проблемка...</h2>
-        Пробіли + перевірка на сервері === власна валідація. <br/>
+<section>
+    <h2>Проблемка...</h2>
+    Пробіли + перевірка на сервері === власна валідація. <br/>
 
-        <code>
+    <code>
             <pre>
             //MDN
             /^[a-zA-Z0-9.!#$%&'*+\/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}
             [a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$/
             </pre>
-        </code>
-    </section>
+    </code>
+</section>
 
-    <section>
-        QA почали перевіряти. Відкрили вікіпедію. <br/>
-        https://en.wikipedia.org/wiki/Email_address
-    </section>
-    <section>
-        <h3>Valid email addresses</h3>
-        <form>
-            <br/><input id="check_1" required type="email" class="email-input"/>
-            <br/><input id="check_2" required type="email" class="email-input"/>
-            <br/><input id="check_3" required type="email" class="email-input"/>
-            <br/><input id="check_4" required type="email" class="email-input"/>
-            <br/><input id="check_5" required type="email" class="email-input"/>(may go to user.name@example.com inbox depending on mail server)
-            <br/><input id="check_6" required type="email" class="email-input"/>
-            <br/><input id="check_7" required type="email" class="email-input"/>(one-letter local-part)
-            <br/><input id="check_8" required type="email" class="email-input"/>
-            <br/><input id="check_9" required type="email" class="email-input"/>
-            <br/><input id="check_10" required type="email" class="email-input"/>(local domain name with no TLD, although ICANN highly discourages dotless email addresses)
-            <br/><input id="check_11" required type="email" class="email-input"/>
-            <br/><input id="check_12" required type="email" class="email-input"/>
-            <br/><input id="check_13" required type="email" class="email-input"/>(see the List of Internet top-level domains)
-            <br/><input id="check_14" required type="email" class="email-input"/>
-            <br/><input id="check_15" required type="email" class="email-input"/>(space between the quotes)
-        </form>
-
-
-        <script>
-            document.getElementById("check_1").value = `simple@example.com`
-            document.getElementById("check_2").value = `very.common@example.com`
-            document.getElementById("check_3").value = `disposable.style.email.with+symbol@example.com`
-            document.getElementById("check_4").value = `other.email-with-hyphen@example.com`
-            document.getElementById("check_5").value = `fully-qualified-domain@example.com`
-            document.getElementById("check_6").value = `user.name+tag+sorting@example.com`
-            document.getElementById("check_7").value = `x@example.com`
-            document.getElementById("check_8").value = `"very.(),:;<>[]\\".VERY.\\"very@\\\\ \\"very\\".unusual"@strange.example.com`
-            document.getElementById("check_9").value = `example-indeed@strange-example.com`
-            document.getElementById("check_10").value = `admin@mailserver1`
-            document.getElementById("check_11").value = `#!$%&'*+-/=?^_\`{}|~@example.org`
-            document.getElementById("check_12").value = `"()<>[]:,;@\\\\\\"!#$%&'-/=?^_\`{}| ~.a"@example.org`
-            document.getElementById("check_13").value = `example@s.example`
-            document.getElementById("check_14").value = `user@[2001:DB8::1]`
-            document.getElementById("check_15").value = `" "@example.org`
-        </script>
-        </form>
-    </section>
-
-    <section>
-        <h3>Invalid email addresses</h3>
-        <br/><input id="check_16" required type="email" class="email-input"/>(no @ character)
-        <br/><input id="check_17" required type="email" class="email-input"/>(only one @ is allowed outside quotation marks)
-        <br/><input id="check_18" required type="email" class="email-input"/>(none of the special characters in this local-part are allowed outside quotation marks)
-        <br/><input id="check_19" required type="email" class="email-input"/>(quoted strings must be dot separated or the only element making up the local-part)
-        <br/><input id="check_20" required type="email" class="email-input"/>(spaces, quotes, and backslashes may only exist when within quoted strings and preceded by a backslash)
-        <br/><input id="check_21" required type="email" class="email-input"/>(even if escaped (preceded by a backslash), spaces, quotes, and backslashes must still be contained by quotes)
-        <br/><input id="check_22" required type="email" class="email-input"/>(local part is longer than 64 characters)
-        <br/><input id="check_23" required type="email" class="email-input"/>(double dot before @)
-        <br/><input id="check_24" required type="email" class="email-input"/>(double dot after @)
+<section>
+    QA почали перевіряти. Відкрили вікіпедію. <br/>
+    https://en.wikipedia.org/wiki/Email_address
+</section>
+<section>
+    <h3>Valid email addresses</h3>
+    <form>
+        <br/><input id="check_1" required type="email" class="email-input"/>
+        <br/><input id="check_2" required type="email" class="email-input"/>
+        <br/><input id="check_3" required type="email" class="email-input"/>
+        <br/><input id="check_4" required type="email" class="email-input"/>
+        <br/><input id="check_5" required type="email" class="email-input"/>(may go to user.name@example.com inbox
+        depending on mail server)
+        <br/><input id="check_6" required type="email" class="email-input"/>
+        <br/><input id="check_7" required type="email" class="email-input"/>(one-letter local-part)
+        <br/><input id="check_8" required type="email" class="email-input"/>
+        <br/><input id="check_9" required type="email" class="email-input"/>
+        <br/><input id="check_10" required type="email" class="email-input"/>(local domain name with no TLD, although
+        ICANN highly discourages dotless email addresses)
+        <br/><input id="check_11" required type="email" class="email-input"/>
+        <br/><input id="check_12" required type="email" class="email-input"/>
+        <br/><input id="check_13" required type="email" class="email-input"/>(see the List of Internet top-level
+        domains)
+        <br/><input id="check_14" required type="email" class="email-input"/>
+        <br/><input id="check_15" required type="email" class="email-input"/>(space between the quotes)
+    </form>
 
 
-        <script>
-            document.getElementById("check_16").value = `Abc.example.com`
-            document.getElementById("check_17").value = `A@b@c@example.com`
-            document.getElementById("check_18").value = `a"b(c)d,e:f;g<h>i[j\\k]l@example.com`
-            document.getElementById("check_19").value = `just"not"right@example.com`
-            document.getElementById("check_20").value = `this is"not\\allowed@example.com`
-            document.getElementById("check_21").value = `this\\ still\\"not\\\\allowed@example.com`
-            document.getElementById("check_22").value = `1234567890123456789012345678901234567890123456789012345678901234+x@example.com`
-            document.getElementById("check_23").value = `john..doe@example.com`
-            document.getElementById("check_24").value = `john.doe@example..com`
-        </script>
-    </section>
+    <script>
+        document.getElementById("check_1").value = `simple@example.com`
+        document.getElementById("check_2").value = `very.common@example.com`
+        document.getElementById("check_3").value = `disposable.style.email.with+symbol@example.com`
+        document.getElementById("check_4").value = `other.email-with-hyphen@example.com`
+        document.getElementById("check_5").value = `fully-qualified-domain@example.com`
+        document.getElementById("check_6").value = `user.name+tag+sorting@example.com`
+        document.getElementById("check_7").value = `x@example.com`
+        document.getElementById("check_8").value = `"very.(),:;<>[]\\".VERY.\\"very@\\\\ \\"very\\".unusual"@strange.example.com`
+        document.getElementById("check_9").value = `example-indeed@strange-example.com`
+        document.getElementById("check_10").value = `admin@mailserver1`
+        document.getElementById("check_11").value = `#!$%&'*+-/=?^_\`{}|~@example.org`
+        document.getElementById("check_12").value = `"()<>[]:,;@\\\\\\"!#$%&'-/=?^_\`{}| ~.a"@example.org`
+        document.getElementById("check_13").value = `example@s.example`
+        document.getElementById("check_14").value = `user@[2001:DB8::1]`
+        document.getElementById("check_15").value = `" "@example.org`
+    </script>
+    </form>
+</section>
 
-    <section>
-        http://emailregex.com/ <br/>
-        <h1>General Email Regex (RFC 5322 Official Standard)</h1>
+<section>
+    <h3>Invalid email addresses</h3>
+    <br/><input id="check_16" required type="email" class="email-input"/>(no @ character)
+    <br/><input id="check_17" required type="email" class="email-input"/>(only one @ is allowed outside quotation marks)
+    <br/><input id="check_18" required type="email" class="email-input"/>(none of the special characters in this
+    local-part are allowed outside quotation marks)
+    <br/><input id="check_19" required type="email" class="email-input"/>(quoted strings must be dot separated or the
+    only element making up the local-part)
+    <br/><input id="check_20" required type="email" class="email-input"/>(spaces, quotes, and backslashes may only exist
+    when within quoted strings and preceded by a backslash)
+    <br/><input id="check_21" required type="email" class="email-input"/>(even if escaped (preceded by a backslash),
+    spaces, quotes, and backslashes must still be contained by quotes)
+    <br/><input id="check_22" required type="email" class="email-input"/>(local part is longer than 64 characters)
+    <br/><input id="check_23" required type="email" class="email-input"/>(double dot before @)
+    <br/><input id="check_24" required type="email" class="email-input"/>(double dot after @)
 
-        <code>
+
+    <script>
+        document.getElementById("check_16").value = `Abc.example.com`
+        document.getElementById("check_17").value = `A@b@c@example.com`
+        document.getElementById("check_18").value = `a"b(c)d,e:f;g<h>i[j\\k]l@example.com`
+        document.getElementById("check_19").value = `just"not"right@example.com`
+        document.getElementById("check_20").value = `this is"not\\allowed@example.com`
+        document.getElementById("check_21").value = `this\\ still\\"not\\\\allowed@example.com`
+        document.getElementById("check_22").value = `1234567890123456789012345678901234567890123456789012345678901234+x@example.com`
+        document.getElementById("check_23").value = `john..doe@example.com`
+        document.getElementById("check_24").value = `john.doe@example..com`
+    </script>
+</section>
+
+<section>
+    http://emailregex.com/ <br/>
+    <h1>General Email Regex (RFC 5322 Official Standard)</h1>
+
+    <code>
         (?:[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*|"(?:[\x01-\x08\x0b\x0c\x0e-\x1f\x21\x23-\x5b\x5d-\x7f]|\\[\x01-\x09\x0b\x0c\x0e-\x7f])*")@(?:(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?|\[(?:(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.){3}(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?|[a-z0-9-]*[a-z0-9]:(?:[\x01-\x08\x0b\x0c\x0e-\x1f\x21-\x5a\x53-\x7f]|\\[\x01-\x09\x0b\x0c\x0e-\x7f])+)\])
-        </code>
-    </section>
+    </code>
+</section>
 
-    <section>
-        <h1>Перевіряємо...</h1>
-        <form action="">
-            <h3>Valid</h3>
-            <br/><input id="re-check_1" required type="text" class="email-input"/>
-            <br/><input id="re-check_2" required type="text" class="email-input"/>
-            <br/><input id="re-check_3" required type="text" class="email-input"/>
-            <br/><input id="re-check_4" required type="text" class="email-input"/>
-            <br/><input id="re-check_5" required type="text" class="email-input"/>(may go to user.name@example.com inbox depending on mail server)
-            <br/><input id="re-check_6" required type="text" class="email-input"/>
-            <br/><input id="re-check_7" required type="text" class="email-input"/>(one-letter local-part)
-            <br/><input id="re-check_8" required type="text" class="email-input"/>
-            <br/><input id="re-check_9" required type="text" class="email-input"/>
-            <br/><input id="re-check_10" required type="text" class="email-input"/>(local domain name with no TLD, although ICANN highly discourages dotless email addresses)
-            <br/><input id="re-check_11" required type="text" class="email-input"/>
-            <br/><input id="re-check_12" required type="text" class="email-input"/>
-            <br/><input id="re-check_13" required type="text" class="email-input"/>(see the List of Internet top-level domains)
-            <br/><input id="re-check_14" required type="text" class="email-input"/>
-            <br/><input id="re-check_15" required type="text" class="email-input"/>(space between the quotes)
+<section>
+    <h1>Перевіряємо...</h1>
+    <form action="">
+        <h3>Valid</h3>
+        <br/><input id="re-check_1" required type="text" class="email-input"/>
+        <br/><input id="re-check_2" required type="text" class="email-input"/>
+        <br/><input id="re-check_3" required type="text" class="email-input"/>
+        <br/><input id="re-check_4" required type="text" class="email-input"/>
+        <br/><input id="re-check_5" required type="text" class="email-input"/>(may go to user.name@example.com inbox
+        depending on mail server)
+        <br/><input id="re-check_6" required type="text" class="email-input"/>
+        <br/><input id="re-check_7" required type="text" class="email-input"/>(one-letter local-part)
+        <br/><input id="re-check_8" required type="text" class="email-input"/>
+        <br/><input id="re-check_9" required type="text" class="email-input"/>
+        <br/><input id="re-check_10" required type="text" class="email-input"/>(local domain name with no TLD, although
+        ICANN highly discourages dotless email addresses)
+        <br/><input id="re-check_11" required type="text" class="email-input"/>
+        <br/><input id="re-check_12" required type="text" class="email-input"/>
+        <br/><input id="re-check_13" required type="text" class="email-input"/>(see the List of Internet top-level
+        domains)
+        <br/><input id="re-check_14" required type="text" class="email-input"/>
+        <br/><input id="re-check_15" required type="text" class="email-input"/>(space between the quotes)
 
-            <h3>Invalid</h3>
-            <br/><input id="re-check_16" required type="text" class="email-input"/>(no @ character)
-            <br/><input id="re-check_17" required type="text" class="email-input"/>(only one @ is allowed outside quotation marks)
-            <br/><input id="re-check_18" required type="text" class="email-input"/>(none of the special characters in this local-part are allowed outside quotation marks)
-            <br/><input id="re-check_19" required type="text" class="email-input"/>(quoted strings must be dot separated or the only element making up the local-part)
-            <br/><input id="re-check_20" required type="text" class="email-input"/>(spaces, quotes, and backslashes may only exist when within quoted strings and preceded by a backslash)
-            <br/><input id="re-check_21" required type="text" class="email-input"/>(even if escaped (preceded by a backslash), spaces, quotes, and backslashes must still be contained by quotes)
-            <br/><input id="re-check_22" required type="text" class="email-input"/>(local part is longer than 64 characters)
-            <br/><input id="re-check_23" required type="text" class="email-input"/>(double dot before @)
-            <br/><input id="re-check_24" required type="text" class="email-input"/>(double dot after @)
+        <h3>Invalid</h3>
+        <br/><input id="re-check_16" required type="text" class="email-input"/>(no @ character)
+        <br/><input id="re-check_17" required type="text" class="email-input"/>(only one @ is allowed outside quotation
+        marks)
+        <br/><input id="re-check_18" required type="text" class="email-input"/>(none of the special characters in this
+        local-part are allowed outside quotation marks)
+        <br/><input id="re-check_19" required type="text" class="email-input"/>(quoted strings must be dot separated or
+        the only element making up the local-part)
+        <br/><input id="re-check_20" required type="text" class="email-input"/>(spaces, quotes, and backslashes may only
+        exist when within quoted strings and preceded by a backslash)
+        <br/><input id="re-check_21" required type="text" class="email-input"/>(even if escaped (preceded by a
+        backslash), spaces, quotes, and backslashes must still be contained by quotes)
+        <br/><input id="re-check_22" required type="text" class="email-input"/>(local part is longer than 64 characters)
+        <br/><input id="re-check_23" required type="text" class="email-input"/>(double dot before @)
+        <br/><input id="re-check_24" required type="text" class="email-input"/>(double dot after @)
 
-            <script>
-                document.getElementById("re-check_1").value = `simple@example.com`
-                document.getElementById("re-check_2").value = `very.common@example.com`
-                document.getElementById("re-check_3").value = `disposable.style.email.with+symbol@example.com`
-                document.getElementById("re-check_4").value = `other.email-with-hyphen@example.com`
-                document.getElementById("re-check_5").value = `fully-qualified-domain@example.com`
-                document.getElementById("re-check_6").value = `user.name+tag+sorting@example.com`
-                document.getElementById("re-check_7").value = `x@example.com`
-                document.getElementById("re-check_8").value = `"very.(),:;<>[]\\".VERY.\\"very@\\\\ \\"very\\".unusual"@strange.example.com`
-                document.getElementById("re-check_9").value = `example-indeed@strange-example.com`
-                document.getElementById("re-check_10").value = `admin@mailserver1`
-                document.getElementById("re-check_11").value = `#!$%&'*+-/=?^_\`{}|~@example.org`
-                document.getElementById("re-check_12").value = `"()<>[]:,;@\\\\\\"!#$%&'-/=?^_\`{}| ~.a"@example.org`
-                document.getElementById("re-check_13").value = `example@s.example`
-                document.getElementById("re-check_14").value = `user@[2001:DB8::1]`
-                document.getElementById("re-check_15").value = `" "@example.org`
+        <script>
+            document.getElementById("re-check_1").value = `simple@example.com`
+            document.getElementById("re-check_2").value = `very.common@example.com`
+            document.getElementById("re-check_3").value = `disposable.style.email.with+symbol@example.com`
+            document.getElementById("re-check_4").value = `other.email-with-hyphen@example.com`
+            document.getElementById("re-check_5").value = `fully-qualified-domain@example.com`
+            document.getElementById("re-check_6").value = `user.name+tag+sorting@example.com`
+            document.getElementById("re-check_7").value = `x@example.com`
+            document.getElementById("re-check_8").value = `"very.(),:;<>[]\\".VERY.\\"very@\\\\ \\"very\\".unusual"@strange.example.com`
+            document.getElementById("re-check_9").value = `example-indeed@strange-example.com`
+            document.getElementById("re-check_10").value = `admin@mailserver1`
+            document.getElementById("re-check_11").value = `#!$%&'*+-/=?^_\`{}|~@example.org`
+            document.getElementById("re-check_12").value = `"()<>[]:,;@\\\\\\"!#$%&'-/=?^_\`{}| ~.a"@example.org`
+            document.getElementById("re-check_13").value = `example@s.example`
+            document.getElementById("re-check_14").value = `user@[2001:DB8::1]`
+            document.getElementById("re-check_15").value = `" "@example.org`
 
 
-                document.getElementById("re-check_16").value = `Abc.example.com`
-                document.getElementById("re-check_17").value = `A@b@c@example.com`
-                document.getElementById("re-check_18").value = `a"b(c)d,e:f;g<h>i[j\\k]l@example.com`
-                document.getElementById("re-check_19").value = `just"not"right@example.com`
-                document.getElementById("re-check_20").value = `this is"not\\allowed@example.com`
-                document.getElementById("re-check_21").value = `this\\ still\\"not\\\\allowed@example.com`
-                document.getElementById("re-check_22").value = `1234567890123456789012345678901234567890123456789012345678901234+x@example.com`
-                document.getElementById("re-check_23").value = `john..doe@example.com`
-                document.getElementById("re-check_24").value = `john.doe@example..com`
+            document.getElementById("re-check_16").value = `Abc.example.com`
+            document.getElementById("re-check_17").value = `A@b@c@example.com`
+            document.getElementById("re-check_18").value = `a"b(c)d,e:f;g<h>i[j\\k]l@example.com`
+            document.getElementById("re-check_19").value = `just"not"right@example.com`
+            document.getElementById("re-check_20").value = `this is"not\\allowed@example.com`
+            document.getElementById("re-check_21").value = `this\\ still\\"not\\\\allowed@example.com`
+            document.getElementById("re-check_22").value = `1234567890123456789012345678901234567890123456789012345678901234+x@example.com`
+            document.getElementById("re-check_23").value = `john..doe@example.com`
+            document.getElementById("re-check_24").value = `john.doe@example..com`
 
-                let emailPattern = /(?:[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*|"(?:[\x01-\x08\x0b\x0c\x0e-\x1f\x21\x23-\x5b\x5d-\x7f]|\\[\x01-\x09\x0b\x0c\x0e-\x7f])*")@(?:(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?|\[(?:(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.){3}(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?|[a-z0-9-]*[a-z0-9]:(?:[\x01-\x08\x0b\x0c\x0e-\x1f\x21-\x5a\x53-\x7f]|\\[\x01-\x09\x0b\x0c\x0e-\x7f])+)\])/
-                for (let i = 1; i<=24; i++) {
-                    let el = document.getElementById(`re-check_${i}`);
-                    if (!emailPattern.test(el.value)) {
-                        el.classList.add("email-input__error")
-                    }
+            let emailPattern = /(?:[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*|"(?:[\x01-\x08\x0b\x0c\x0e-\x1f\x21\x23-\x5b\x5d-\x7f]|\\[\x01-\x09\x0b\x0c\x0e-\x7f])*")@(?:(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?|\[(?:(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.){3}(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?|[a-z0-9-]*[a-z0-9]:(?:[\x01-\x08\x0b\x0c\x0e-\x1f\x21-\x5a\x53-\x7f]|\\[\x01-\x09\x0b\x0c\x0e-\x7f])+)\])/
+            for (let i = 1; i <= 24; i++) {
+                let el = document.getElementById(`re-check_${i}`);
+                if (!emailPattern.test(el.value)) {
+                    el.classList.add("email-input__error")
                 }
-            </script>
+            }
+        </script>
 
-        </form>
-    </section>
+    </form>
+</section>
+
+<section>
+    <form class="example-form" action="">
+        <label>
+            <span class="example-form__label">Email:</span>
+            <input type="email" required value="mivankiv\developer.com"/>
+        </label>
+        <span class="error-message">То є недобрий email</span>
+        <button class="example-form__hero-button">Just do it!</button>
+    </form>
+</section>
+
+<section>
+    А давай будемо підказувати, де саме користувач зробив помилку!
 
     <section>
         <form class="example-form" action="">
             <label>
                 <span class="example-form__label">Email:</span>
-                <input type="email" required value="mivankiv~developer.com"/>
+                <input type="email" required value="mivankiv\developer.com"/>
             </label>
-            <span class="error-message">То є недобрий email</span>
+            <span class="error-message">----^</span>
+            <span class="error-message">Тутайво помилка</span>
+
             <button class="example-form__hero-button">Just do it!</button>
         </form>
     </section>
+</section>
+
+<section>
+    <h2>Finite Automata (Алгоритм на якому реалізовуються RegExp)</h2>
 
     <section>
-        А давай будемо підказувати, де саме користувач зробив помилку!
-
-        <section>
-            <form class="example-form" action="">
-                <label>
-                    <span class="example-form__label">Email:</span>
-                    <input type="email" required value="mivankiv~developer.com"/>
-                </label>
-                <span class="error-message">----^</span>
-                <span class="error-message">Тутайво помилка</span>
-
-                <button class="example-form__hero-button">Just do it!</button>
-            </form>
-        </section>
+        <h3>Набір станів</h3>
+        <img src="img/FA_explanation_1.jpg" alt="">
     </section>
 
     <section>
-        <h2>Finite Automata (Алгоритм на якому реалізовуються RegExp)</h2>
-
-        <section>
-            <h3>Набір станів</h3>
-            <img src="img/FA_explanation_1.jpg" alt="">
-        </section>
-
-        <section>
-            <h3>Набір переходів між станами</h3>
-            <img src="img/FA_explanation_2.jpg" alt="">
-        </section>
-
-        <section>
-            <h3>Один початковий стан</h3>
-            <img src="img/FA_explanation_3.jpg" alt="">
-        </section>
-
-        <section>
-            <h3>Один або кільак кінцевих станів</h3>
-            <img src="img/FA_explanation_4.jpg" alt="">
-        </section>
-
-        <section>
-            <h3>Всі переходи відбуваються за якоїсь умови</h3>
-            <img src="img/FA_explanation_5.jpg" alt="">
-        </section>
-
+        <h3>Набір переходів між станами</h3>
+        <img src="img/FA_explanation_2.jpg" alt="">
     </section>
 
     <section>
-        Якщо поглянути детальніше на регулярні вирази, то всіх їх можна привести до трьох простих операцій
-        <img src="img/PrimitiveRegexp_1.jpg" alt="">
+        <h3>Один початковий стан</h3>
+        <img src="img/FA_explanation_3.jpg" alt="">
     </section>
 
     <section>
-        Спробуємо реалізувати FA для виразу <code>a*b*c*</code>
-        <img src="img/DFAvsNFA_example.jpg" alt="">
+        <h3>Один або кільак кінцевих станів</h3>
+        <img src="img/FA_explanation_4.jpg" alt="">
     </section>
 
     <section>
-        Ок, а як це реалізувати?
-        Сам граф можна представити звичайним 2-вимірним масивом.
-        DFA
-        <img src="img/DFA_table.jpg" alt="">
+        <h3>Всі переходи відбуваються за якоїсь умови</h3>
+        <img src="img/FA_explanation_5.jpg" alt="">
     </section>
 
-    <section>
-        Код обходу дерева доволі тривіальний.
-        <pre><code>
+</section>
+
+<section>
+    Якщо поглянути детальніше на регулярні вирази, то всіх їх можна привести до трьох простих операцій
+    <img src="img/PrimitiveRegexp_1.jpg" alt="">
+</section>
+
+<section>
+    Спробуємо реалізувати FA для виразу <code>a*b*c*</code>
+    <img src="img/DFAvsNFA_example.jpg" alt="">
+</section>
+
+<section>
+    Ок, а як це реалізувати?
+    Сам граф можна представити звичайним 2-вимірним масивом.
+    DFA
+    <img src="img/DFA_table.jpg" alt="">
+</section>
+
+<section>
+    Код обходу дерева доволі тривіальний.
+    <pre><code>
             const TRANSITIONS = [...]; //Матриця переходів
             const input = ... //Вхідна стрічка ( наприклад "aaabbbcccc" )
 
@@ -311,72 +329,300 @@
                 state = TRANSITIONS[state][input[i++]]
             }
         </code></pre>
-    </section>
+</section>
 
-    <section>
-        NFA
-        <img src="img/NFA_table.jpg" alt="">
-    </section>
+<section>
+    NFA
+    <img src="img/NFA_table.jpg" alt="">
+</section>
 
-    <section>
-        Пробуємо в бою.
-        <span class="DFA-test">
-            <input class="DFA-test__input" type="text" id="DFA-test"/>
-            <span class="DFA-test__error"></span>
-        </span>
+<section>
+    Пробуємо в бою.
+    <span class="DFA-test">
+        <input class="DFA-test__input" type="text" id="DFA-test"/>
+        <span class="DFA-test__error"></span>
+    </span>
 
-        <script>
-            const DFA = (TRANSITIONS) => (input) => {
-                let i = 0
-                let state = 0;
+    <script>
+        const DFA = (TRANSITIONS) => (input) => {
+            let i = 0
+            let state = 0;
 
-                while (input[i]) {
-                    state = TRANSITIONS[state][input[i++]];
-                    if (state === undefined || state === -1) return i
-                }
-                return true
+            while (input[i]) {
+                state = TRANSITIONS[state][input[i++]];
+                if (state === undefined || state === -1) return i
             }
+            return true
+        }
 
-            const  TRANSITIONS= [
-                { a:  0, b:  1, c: 2},
-                {        b:  1, c: 2},
-                {               c: 2}
-            ];
+        const TRANSITIONS = [
+            {a: 0, b: 1, c: 2},
+            {b: 1, c: 2},
+            {c: 2}
+        ];
 
-            const verify = DFA(TRANSITIONS);
+        const verify = DFA(TRANSITIONS);
 
-            document
-                .querySelector(".DFA-test__input")
-                .addEventListener("input", (ev) => {
-                    const errorMessage = document.querySelector(".DFA-test__error");
-                    const {value} = ev.target;
+        document
+            .querySelector(".DFA-test__input")
+            .addEventListener("input", (ev) => {
+                const errorMessage = document.querySelector(".DFA-test__error");
+                const {value} = ev.target;
 
-                    const result =  verify(value);
-                    if (typeof result === "number") {
-                        errorMessage.innerHTML = `
-                        ${Array(result-1).fill("&nbsp;").join("")}^ <br/>
+                const result = verify(value);
+                if (typeof result === "number") {
+                    errorMessage.innerHTML = `
+                        ${Array(result - 1).fill("&nbsp;").join("")}^ <br/>
                         Тутка помилка
                         `
-                    } else {
-                        errorMessage.innerHTML = ``
-                    }
-                })
+                } else {
+                    errorMessage.innerHTML = ``
+                }
+            })
 
-        </script>
-    </section>
+    </script>
+</section>
 
-    <section>
+<section>
+    <code>
         /^[a-zA-Z0-9.!#$%&'*+\/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}
         [a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$/
-    </section>
+    </code>
+</section>
 
-    <section>
-        TODO: перемелювати приклад з карточки. Або заюзати якусь бібліотеку.
-    </section>
+<section>
+    Очевидно, що мають бути алгоритми автоматичної конвертації <code>RegEx</code> в <code>DFA</code> і <code>NFA</code>.<br>
+    <a href="https://en.wikipedia.org/wiki/Thompson%27s_construction">Thompson's construction</a><br/>
+    <a href="http://ivanzuzak.info/noam/webapps/fsm2regex/">FSM2Regex</a><br>
+    <a href="http://hokein.github.io/Automata.js/#">Automata.js</a><br>
+</section>
 
+<section>
+    Засада!
+    Ми можемо сказати де саме у нас виникла помилка, та не можемо сказати, причину цієї помилки
+</section>
+
+<section>
     <section>
-        TODO:
-        Треба придумати приклад де ми виходимо за рамки можливостей RegExp. І перейти до пояснення, чому це не можливо.
+        <form class="example-form" action="">
+            <label>
+                <span class="example-form__label">Email:</span>
+                <input type="email" required value="mivankiv\developer.com"/>
+            </label>
+            <span class="error-message">----^</span>
+            <span class="error-message">Тутайво помилка</span>
+        </form>
     </section>
+</section>
+
+
+<section>
+    <form class="example-form" action="">
+        <label>
+            <span class="example-form__label">Email:</span>
+            <input type="email" required value="mivankiv.developer.com"/>
+        </label>
+        <span class="error-message">&nbsp;</span>
+        <span class="error-message">Чоловіче добрий, а <code>@</code> то ти ж забув вставити!</span>
+    </form>
+</section>
+
+<section>
+    <section>
+        <form class="example-form" action="">
+            <label>
+                <span class="example-form__label">Email:</span>
+                <input type="email" required value="google@mivankiv"/>
+            </label>
+            <span class="error-message">----^</span>
+            <span class="error-message">Все класно, тільки от було б ще добре додати доменне імя. <code>.com</code> чи <code>.org</code> наприклад</span>
+        </form>
+    </section>
+</section>
+
+<section>
+    Lexer -> Parser -> Semantic Analise -> Optimization -> Code gen
+</section>
+
+<section>
+    <h2>Контекстно вільні граматики</h2>
+</section>
+
+<section>
+    Контекстно-вільна граматика (скорочено КВ граматика) — формальна граматика типу 2 в ієрархії Чомскі.
+</section>
+
+<section>
+    <p>
+        Контекстно-вільна граматика \(G\) це четвірка \((N,T,P,S)\):
+    <ul>
+        <li>\(S\in N\)</li>
+        <li>\( N\) та \( T\) скінченні множини, що не перетинаються</li>
+        <li>\(P\) скінченна підмножина \( N\times (N\cup T)^{*} \)</li>
+    </ul>
+
+
+    При цьому, використовують такі назви: \(N\) — множина нетермінальних символів, \(T\) — множина термінальних
+    символів, \(P\) — множина правил виводу \(S\) початковий символ. Правила \( (\alpha ,\beta )\in P \) записують як
+    \(\alpha \rightarrow \beta \).
+    <br>
+
+    В лівій частині правила виводу має знаходитись одна змінна (нетермінальний символ). Формально, має виконуватись \(
+    \alpha \in N,\beta \in (N\cup T)^{*}, де |\beta |\geq 1\).<br/>
+
+    Розширенням КВ-граматик є стохастичні КВ граматики. Правилам виведення співставляють ймовірність використання: \(
+    \rho :P\rightarrow \mathbb {R} \) де \( \sum _{p_{r}\in P_{r}}\rho (p_{r})=1 \)
+    </p>
+</section>
+
+<section>
+    <img src="img/alien_vs_predator.jpg" alt="Aliens vs predator">
+</section>
+
+<section>
+    <pre style="position: relative"><code>
+<span class="code-label">Продукція (production)</span><span class="code-label">Термінальні символи (terminal)</span><span class="code-label">Не термінільні символи (non terminal)</span><span class="code-label">Стартовий символ</span>
+Exp    -> Exp <span class="terminal">+</span> Exp
+        | Exp <span class="terminal">*</span> Exp
+        | <span class="terminal">(</span>Exp<span class="terminal">)</span>
+        | Number
+Number -> Digit Number
+        | Digit
+Digit  -> <span class="terminal">1</span> | <span class="terminal">2</span> | <span class="terminal">3</span> | <span class="terminal">4</span> | <span class="terminal">5</span> | <span class="terminal">6</span> | <span class="terminal">7</span> | <span class="terminal">8</span> | <span class="terminal">9</span> | <span class="terminal">0</span>
+    </code></pre>
+
+    //TODO: можливо варто втулити діаграми Вірта?
+</section>
+
+<section>
+    Перетворюємо це все в код:
+        <pre style="position: relative" id="bottom-up-code"><code>
+<span step="1">const</span> Exp    <span step="2"></span>-> Exp <span class="terminal">+</span> Exp
+              | Exp <span class="terminal">*</span> Exp
+              | <span class="terminal">(</span>Exp<span class="terminal">)</span>
+              | Number
+
+<span step="1">const</span> Number -> Digit Number
+              | Digit
+
+<span step="1">const</span> Digit  -> <span class="terminal">1</span> | <span class="terminal">2</span> | <span class="terminal">3</span> | <span class="terminal">4</span> | <span class="terminal">5</span> | <span class="terminal">6</span> | <span class="terminal">7</span> | <span class="terminal">8</span> | <span class="terminal">9</span> | <span class="terminal">0</span>
+    </code></pre>
+
+    <style>
+        [step] {
+            opacity: 0;
+            transition: opacity 0.5s;
+        }
+    </style>
+
+    <script>
+        let counter = 0;
+        const codeEl = document.getElementById("bottom-up-code");
+        codeEl
+            .addEventListener("click", ()=> {
+                counter +=1;
+                console.log(codeEl.querySelectorAll(`*[step="${counter}"]`));
+                [...codeEl.querySelectorAll(`[step="${counter}"]`)].map(el => el.style.opacity = 1)
+            })
+    </script>
+</section>
+
+<section>
+
+    <span class="DFA-test" id="top-bottom-parsing">
+        <input class="DFA-test__input" type="text" />
+        <span class="DFA-test__error"></span>
+    </span>
+
+    <script>
+        const Parser = (input) => {
+            let next = 0;
+            const termList = ["(", ")", "+", "*", "1", "2", "3", "4", "5", "6", "7", "8", "9", "0"];
+            const readNextTerm = () => {
+                let buffer = "";
+                do {
+                    if (input[next]) buffer += input[next++]
+                    else return
+
+                    if (termList.indexOf(buffer + input[next]) === -1) break;
+
+                } while (true);
+
+                return buffer;
+            };
+
+
+            const term = (term) => term.test(readNextTerm());
+
+            const INT = /\d/;
+            const PLUS = /\+/;
+            const OPEN = /\(/;
+            const CLOSE = /\)/;
+            const TIMES = /\*/;
+
+            //BNF
+            const E1 = () => T()
+            const E2 = () => T() && term(PLUS) && E()
+
+            const E = () => {
+                const save = next;
+                return ( next = save, E2()) ||
+                    ( next = save, E1())
+            }
+
+            const T1 = () => term(INT)
+            const T2 = () => term(INT) && term(TIMES) && T()
+            const T3 = () => term(OPEN) && E() && term(CLOSE)
+
+            const T = () =>  {
+                const save = next;
+                return (next = save, T3()) ||
+                    (next = save, T2()) ||
+                    (next = save, T1())
+            }
+
+            const  result = E();
+
+            if (next < input.length) return {
+                message: "Unexpected symbol",
+                position: next
+            }
+
+            if (!result) return {
+                message: "Syntax error",
+                position: next
+            }
+
+            return
+        };
+
+
+        const exampleEl = document.getElementById("top-bottom-parsing");
+
+        exampleEl
+            .querySelector("input")
+            .addEventListener("input",(ev) => {
+                const {value} = ev.target;
+                const result = Parser(value);
+
+                const errorMessage = exampleEl.querySelector(".DFA-test__error");
+
+                if ( typeof  result !== "undefined") {
+                    errorMessage.innerHTML = `
+                        ${Array(result.position).fill("&nbsp;").join("")}^ <br/>
+                        Аяяй
+                        `
+                } else {
+                    errorMessage.innerHTML = ``
+                }
+            })
+
+
+    </script>
+
+</section>
+
+
+
 </body>
 </html>
