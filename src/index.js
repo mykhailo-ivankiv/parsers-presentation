@@ -1,47 +1,41 @@
-import * as cytoscape from "cytoscape";
+import peg from "pegjs"
 
-const cy = cytoscape({
-  container: document.getElementById("cy"), // container to render in
+const parser = peg.generate(`
+emailAddress   = local "@" domain
+local           = localWord ("." localWord)*
+domain          = (subDomain ".")+ topDomain
+localWord      = localChar+
+subDomain      = subDomainChar+
+topDomain      = topDomainChar topDomainChar topDomainChar? topDomainChar? topDomainChar? topDomainChar?
+localChar      = alpha / num / special
+subDomainChar = alpha / num / "-"
+topDomainChar = alpha
+alpha          = [A-Za-z]
+num            = [0-9]
+special        = "!"/ "#"/ "$"/ "%"/ "&"/ "'"/ "*"/ "+"/ "-"/ "/" / "=" / "?" / "^" / "_" / "\`" / "{" / "|" / "}" / "~"
 
-  elements: [
-    // list of graph elements to start with
-    {
-      // node a
-      data: { id: "a" }
-    },
-    {
-      // node b
-      data: { id: "b" }
-    },
-    {
-      // edge ab
-      data: { id: "ab", source: "a", target: "b" }
+`);
+
+const container = document
+    .getElementById("final");
+
+const inputEl = container.querySelector("input");
+const errorEl = container.querySelector(".DFA-test__error");
+
+inputEl.addEventListener("input", (ev)=>{
+    const {value} = ev.target ;
+    try {
+        parser.parse(value);
+        errorEl.innerHTML="";
+    } catch (e) {
+
+        if (e.found) {
+            errorEl.innerHTML = `${Array(e.location.start.offset).fill("&nbsp;").join("")}^ <br/>
+            Маттір божа! А то що таке?`
+        } else {
+            errorEl.innerHTML = ` <br/>
+            Тут явно чогось не вистачає...`
+        }
+        console.log(e)
     }
-  ],
-
-  style: [
-    // the stylesheet for the graph
-    {
-      selector: "node",
-      style: {
-        "background-color": "#666",
-        label: "data(id)"
-      }
-    },
-
-    {
-      selector: "edge",
-      style: {
-        width: 3,
-        "line-color": "#ccc",
-        "target-arrow-color": "#ccc",
-        "target-arrow-shape": "triangle"
-      }
-    }
-  ],
-
-  layout: {
-    name: "grid",
-    rows: 1
-  }
-});
+})

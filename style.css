@@ -6,24 +6,54 @@ code {
   font-family: PT Mono, monospace;
 }
 
+h1  {
+  text-align: center;
+  font-size: 4rem;
+}
+
+h2 {
+  font-size: 3rem;
+}
+h3 {
+  font-size: 2rem;
+}
+
 section {
   min-height: 100vh;
   padding: 2rem;
+  width: 60rem;
+  margin: auto;
 }
 
 img {
+  display: block;
+  object-fit: contain;
   height: 100vh;
   width: 100vw;
   object-fit: contain;
+  position: relative;
+  left: 30rem;
+  transform: translate(-50vw,0);
 }
 
 .example-form {
-  margin: auto;
-  width: 50rem;
+  position: relative;
+  width: 60rem;
   vertical-align: bottom;
+}
+.example-form__error-message {
+  font-family: PT Sans, sans-serif;
+  height: 3rem;
+  position: absolute;
+  bottom: -2rem;
+  width: 100%;
+  left: 8.5rem;
+  color: red;
+  font-size: 2rem;
 }
 
 .example-form__label {
+  display: block;
   line-height: 4rem;
   padding: 0.5rem;
   font-size: 2rem;
@@ -31,13 +61,18 @@ img {
 }
 
 .example-form input {
-  width: 100%;
   font-family: PT Sans, sans-serif;
   font-size: 3rem;
   padding: 0.5rem;
   border: none;
   border-bottom: 4px dashed #ccc;
   transition: border 0.3s;
+  width: 60rem;
+}
+
+.example-form input:invalid {
+  outline: none !important;
+  box-shadow:none;
 }
 
 .example-form input:focus {
@@ -50,18 +85,37 @@ img {
   padding: 1rem 2rem;
   border-radius: 5px;
   font-size: 2rem;
-  border: 1px solid #ccc;
 }
 
 .email-input {
+  font-family: PT Sans, sans-serif;
+  font-size: 2rem;
+  padding: 0.2em;
+  border: none;
+  /*border-bottom: 2px dashed #ccc;*/
+  transition: border 0.3s;
+  width: 60rem;
+  margin: 0;
 }
-.email-input__error {
-  border: 1px solid red;
+.email-input_check {
+  font-size: 1rem;
+  display: inline;
+  width: 30rem;
+}
+.email-input_check:invalid {
+  color: red !important;
 }
 
-img {
-  display: block;
+.email-input:invalid,
+.email-input__error {
+  box-shadow: none;
+  color: red;
 }
+
+.example-form_inline .example-form__label{ display: inline-block; }
+.example-form_inline input { width: 35rem; display: inline-block; margin: 1rem }
+.example-form_inline .example-form__hero-button { width: 9rem; margin: 1rem; }
+
 
 .DFA-test {
   display: block;
@@ -76,17 +130,46 @@ img {
 }
 .DFA-test__error {
   font-family: "PT Mono", monospace;
-  font-size: 1rem;
   display: block;
   color: red;
+  font-size: 3rem;
+  margin: 1rem;
+  top: -1.5rem;
+  position: relative;
 }
 
 .code-label {
-    position: absolute;
-    padding: 0.5rem;
-    font-size: 1rem;
-    background: #f5b111;
-    border-radius: 3px;
-    right: 5rem;
+  opacity: 0.81;
+  position: absolute;
+  padding: 0.5rem;
+  font-size: 1rem;
+  background: #f5b111;
+  border-radius: 3px;
+}
+.arrow {
+  position: absolute;
+  height: 0px;
+  width: 0px;
+}
 
+.DFA-test {
+}
+.DFA-test__input {
+  width: 50rem;
+}
+.error-message {
+  color: red;
+  font-family: PT Mono, monospace;
+  font-size: 3rem;
+  margin: 0.3rem;
+}
+
+.terminal {
+  color: green;
+}
+.terminal:before {
+  content: "\"";
+}
+.terminal:after {
+  content: "\"";
 }
