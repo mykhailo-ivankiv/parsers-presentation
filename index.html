@@ -284,7 +284,7 @@ $/
 </section>
 
 <section id="18">
-    <h2>Всі переходи відбуваються за якоїсь умови</h2>
+    <h2>Всі переходи відбуваються за умови</h2>
     <img style="height: 40rem;" src="img/FA_explanation_5.svg" alt="">
 </section>
 
@@ -504,7 +504,7 @@ Int  -> <span class="terminal">1</span> | <span class="terminal">2</span> | <spa
 </section>
 
 <section id="38" style="position: relative;">
-    <span style="top: 32px; left: 74px;" class="code-label">
+    <span style="top: 1.9rem; left: 3.5rem;" class="code-label">
         <span class="arrow"
         style="
             border-top: 31px solid #f5b111;
@@ -607,192 +607,188 @@ Int  -> <span class="terminal">1</span> | <span class="terminal">2</span> | <spa
 
 <section id="39">
     <h3>Перетворюємо це все в код<br></h3>
-    <pre><code>
-    Exp  -> Term + Exp
+    <pre style="font-size: 1.5rem"><code>
+    Exp  -> Term <span class="terminal">+</span> Exp
           | Term
 
-    Term -> ( Exp )
-          | Int * Term
+    Term -> <span class="terminal">(</span> Exp <span class="terminal">)</span>
+          | Int <span class="terminal">*</span> Term
           | Int
 
-    Int  -> 1
-          | 2
-          | 3
-          | 4
-          | 5
-          | 6
-          | 7
-          | 8
-          | 9
-          | 0
+    Int  -> <span class="terminal">1</span>
+          | <span class="terminal">2</span>
+          | <span class="terminal">3</span>
+          | <span class="terminal">4</span>
+          | <span class="terminal">5</span>
+          | <span class="terminal">6</span>
+          | <span class="terminal">7</span>
+          | <span class="terminal">8</span>
+          | <span class="terminal">9</span>
+          | <span class="terminal">0</span>
     </code></pre>
 </section>
 
 <section id="40">
     <h3>Кожна продукція - це функція<br></h3>
-    <pre><code>
-    const Exp  = () => {
-        return Term + Exp
+    <pre style="font-size: 1.5rem"><code>
+    <span class="highlight">const</span> Exp  <span class="highlight">= () => {</span>
+        <span class="highlight">return</span> Term <span class="terminal">+</span> Exp
              | Term
-    }
+    <span class="highlight">}</span>
 
-    const Term = () => {
-        return ( Exp )
-             | Int * Term
+    <span class="highlight">const</span> Term <span class="highlight">= () => {</span>
+        <span class="highlight">return</span> <span class="terminal">(</span> Exp <span class="terminal">)</span>
+             | Int <span class="terminal">*</span> Term
              | Int
     }
 
-    const Int  = () => {
-        return 1
-             | 2
-             | 3
-             | 4
-             | 5
-             | 6
-             | 7
-             | 8
-             | 9
-             | 0
-        }
+    <span class="highlight">const</span> Int  <span class="highlight">= () => {</span>
+        <span class="highlight">return</span> <span class="terminal">1</span>
+              | <span class="terminal">2</span>
+              | <span class="terminal">3</span>
+              | <span class="terminal">4</span>
+              | <span class="terminal">5</span>
+              | <span class="terminal">6</span>
+              | <span class="terminal">7</span>
+              | <span class="terminal">8</span>
+              | <span class="terminal">9</span>
+              | <span class="terminal">0</span>
+        <span class="highlight">}</span>
     </code></pre>
 </section>
 
 <section id="41">
-<h3>Кожен термінальний символ - це стрічка, не термінальний символ - виклик функції.<br></h3>
-<pre><code>
+<h3>Кожен не термінальний символ - виклик функції.<br></h3>
+<pre style="font-size: 1.5rem"><code>
     const Exp  = () => {
-        return Term() "+" Exp()
-             | Term()
+        return Term<span class="highlight">()</span> <span class="terminal">+</span> Exp<span class="highlight">()</span>
+             | Term<span class="highlight">()</span>
     }
 
     const Term = () => {
-        return "(" Exp()  ")"
-             | Int() "*" Term()
-             | Int()
+        return <span class="terminal">(</span> Exp<span class="highlight">()</span>  <span class="terminal">)</span>
+             | Int<span class="highlight">()</span> <span class="terminal">*</span> Term<span class="highlight">()</span>
+             | Int<span class="highlight">()</span>
     }
 
     const Int  = () => {
-        return "1"
-             | "2"
-             | "3"
-             | "4"
-             | "5"
-             | "6"
-             | "7"
-             | "8"
-             | "9"
-             | "0"
+        return <span class="terminal">1</span>
+             | <span class="terminal">2</span>
+             | <span class="terminal">3</span>
+             | <span class="terminal">4</span>
+             | <span class="terminal">5</span>
+             | <span class="terminal">6</span>
+             | <span class="terminal">7</span>
+             | <span class="terminal">8</span>
+             | <span class="terminal">9</span>
+             | <span class="terminal">0</span>
     }
 </code></pre>
 </section>
 
 <section id="42">
     <h3>Вписуємо "&&" та "||", і розставляємо дужки<br></h3>
-    <pre><code>
+    <pre style="font-size: 1.5rem"><code>
     const Exp  = () => {
-        return ( Term() && "+" && Exp() )
-            || ( Term() )
+        return ( Term() <span class="highlight">&&</span> <span class="terminal">+</span> <span class="highlight">&&</span> Exp() )
+            <span class="highlight">||</span> ( Term() )
     }
 
     const Term = () => {
-        return ( "(" && Exp() && ")" )
-            || ( Int() && "*" && Term() )
-            || ( Int() )
+        return ( <span class="terminal">(</span> <span class="highlight">&&</span> Exp() <span class="highlight">&&</span> <span class="terminal">)</span> )
+            <span class="highlight">||</span> ( Int() <span class="highlight">&&</span> <span class="terminal">*</span> <span class="highlight">&&</span> Term() )
+            <span class="highlight">||</span> ( Int() )
     }
 
     const Int  = () => {
-        return ( "1" )
-             | ( "2" )
-             | ( "3" )
-             | ( "4" )
-             | ( "5" )
-             | ( "6" )
-             | ( "7" )
-             | ( "8" )
-             | ( "9" )
-             | ( "0" )
+        return ( <span class="terminal">1</span> )
+            <span class="highlight">||</span>( <span class="terminal">2</span> )
+            <span class="highlight">||</span>( <span class="terminal">3</span> )
+            <span class="highlight">||</span>( <span class="terminal">4</span> )
+            <span class="highlight">||</span>( <span class="terminal">5</span> )
+            <span class="highlight">||</span>( <span class="terminal">6</span> )
+            <span class="highlight">||</span>( <span class="terminal">7</span> )
+            <span class="highlight">||</span>( <span class="terminal">8</span> )
+            <span class="highlight">||</span>( <span class="terminal">9</span> )
+            <span class="highlight">||</span>( <span class="terminal">0</span> )
     }
     </code></pre>
 </section>
 
 <section id="43">
     <h3>Всі термінальні символи використовуємо через функцію match<br></h3>
-    <pre><code>
-    const match = (term) => {}
+    <pre style="font-size: 1.5rem"><code>
+    <span class="highlight">const match = (term) => {}</span>
 
     const Exp  = () => {
-        return ( Term() && match("+") && Exp() )
+        return ( Term() && <span class="highlight">match(<span class="terminal">+</span>)</span> && Exp() )
             || ( Term() )
     }
 
     const Term = () => {
-        return ( match("(") && Exp() && match(")") )
-            || ( Int() && match("*") && Term() )
+        return ( <span class="highlight">match(<span class="terminal">(</span>)</span> && Exp() && <span class="highlight">match(<span class="terminal">)</span>)</span> )
+            || ( Int() && <span class="highlight">match(<span class="terminal">"*"</span>)</span> && Term() )
             || ( Int() )
     }
 
     const Int  = () => {
-        return ( match("1") )
-             | ( match("2") )
-             | ( match("3") )
-             | ( match("4") )
-             | ( match("5") )
-             | ( match("6") )
-             | ( match("7") )
-             | ( match("8") )
-             | ( match("9") )
-             | ( match("0") )
+        return ( <span class="highlight">match(<span class="terminal">1</span>)</span> )
+            || ( <span class="highlight">match(<span class="terminal">2</span>)</span> )
+            || ( <span class="highlight">match(<span class="terminal">3</span>)</span> )
+            || ( <span class="highlight">match(<span class="terminal">4</span>)</span> )
+            || ( <span class="highlight">match(<span class="terminal">5</span>)</span> )
+            || ( <span class="highlight">match(<span class="terminal">6</span>)</span> )
+            || ( <span class="highlight">match(<span class="terminal">7</span>)</span> )
+            || ( <span class="highlight">match(<span class="terminal">8</span>)</span> )
+            || ( <span class="highlight">match(<span class="terminal">9</span>)</span> )
+            || ( <span class="highlight">match(<span class="terminal">0</span>)</span> )
     }
     </code></pre>
 </section>
 
 <section id="44">
     <h3>
-        Добавляємо вказівник на символ, який зараз перевіряється. В кожній функції на початку зберігаємо вказівник. <br>
-        При кожній спробі парсингу, відновлюємо вказівник
+        Добавляємо роботу з вказівником <br>
     </h3>
-    <pre><code>
-    let i = 0
+    <pre style="font-size: 1.3rem"><code>
+    <span class="highlight">let i = 0</span>
     const match = (term) => {}
 
     const Exp =  () => {
-        const s = i;
-        return (i = s, Term() && match("+") && Exp() )
-            || (i = s, Term() )
+        <span class="highlight">const s = i;</span>
+        return (<span class="highlight">i = s</span>, Term() && match("+") && Exp() )
+            || (<span class="highlight">i = s</span>, Term() )
     }
 
     const Term = () => {
-        const s = i;
-        return (i = s, match("(") && Exp && match(")") )
-            || (i = s, Int() && match("*") && Term() )
-            || (i = s, Int() )
+        <span class="highlight">const s = i;</span>
+        return (<span class="highlight">i = s</span>, match("(") && Exp && match(")") )
+            || (<span class="highlight">i = s</span>, Int() && match("*") && Term() )
+            || (<span class="highlight">i = s</span>, Int() )
     }
 
     const Int  = () => {
-        const s = i;
-        return (i = s, match("1") )
-            || (i = s, match("2") )
-            || (i = s, match("3") )
-            || (i = s, match("4") )
-            || (i = s, match("5") )
-            || (i = s, match("6") )
-            || (i = s, match("7") )
-            || (i = s, match("8") )
-            || (i = s, match("9") )
-            || (i = s, match("0") )
+        <span class="highlight">const s = i;</span>
+        return (<span class="highlight">i = s</span>, match("1") )
+            || (<span class="highlight">i = s</span>, match("2") )
+            || (<span class="highlight">i = s</span>, match("3") )
+            || (<span class="highlight">i = s</span>, match("4") )
+            || (<span class="highlight">i = s</span>, match("5") )
+            || (<span class="highlight">i = s</span>, match("6") )
+            || (<span class="highlight">i = s</span>, match("7") )
+            || (<span class="highlight">i = s</span>, match("8") )
+            || (<span class="highlight">i = s</span>, match("9") )
+            || (<span class="highlight">i = s</span>, match("0") )
     }
     </code></pre>
 </section>
 
 <section id="45">
-    <h3>
-        Дописуємо функцію match, і огортаємо весь код в функцію-врапер. Функція-врапер повертає результат функції початкового символа.
-
-    </h3>
-    <pre><code>
-const Parser (input) {
+    <h3>Реалізовуємо match, і добавляємо врапер</h3>
+    <pre style="font-size: 1.2rem"><code>
+<span class="highlight">const Parser (input)</span>{
     let i = 0
-    const match = (term) => term === input[i++];
+    const match = (term) => <span class="highlight">term === input[i++];</span>
 
     const Exp =  () => {
         const s = i;
@@ -821,15 +817,15 @@ const Parser (input) {
             || (i = s, match("0") )
     }
 
-    return Exp()
+    <span class="highlight">return Exp()</span>
 }
     </code></pre>
 </section>
 
-<section id="65">
-    <span class="DFA-test" id="top-bottom-parsing">
-        <input class="DFA-test__input" type="text" />
-        <span class="DFA-test__error"></span>
+<section id="46">
+    <span class="DFA-test example-form" id="top-bottom-parsing">
+        <input style="font-family: PT Mono, monospace" class="DFA-test__input" type="text" value="1+2*(4+4)" />
+        <span style="margin: 1.3rem 0.3rem; " class="DFA-test__error"></span>
     </span>
 
     <script>
@@ -919,32 +915,54 @@ const Parser (input) {
 
 <section id="48">
     <h2>ABNF</h2>
-    <pre><code>
-    email-address   = local "@" domain
-    local           = local-word *("." local-word)
-    domain          = 1*(sub-domain ".") top-domain
-    local-word      = 1*local-char
-    sub-domain      = 1*sub-domain-char
-    top-domain      = 2*6top-domain-char
-    local-char      = alpha / num / special
-    sub-domain-char = alpha / num / "-"
-    top-domain-char = alpha
-    alpha           = %d65-90 / %d97-122
-    num             = %d48-57
-    special         = %d33 / %d35 / %d36-39 / %d42-43 / %d45 / %d47
-                    / %d61 / %d63 / %d94-96 / %d123-126
+    <pre style="font-size: 1.5rem"><code>
+email-address   = local "@" domain
+local           = local-word *("." local-word)
+domain          = 1*(sub-domain ".") top-domain
+local-word      = 1*local-char
+sub-domain      = 1*sub-domain-char
+top-domain      = 2*6top-domain-char
+local-char      = alpha / num / special
+sub-domain-char = alpha / num / "-"
+top-domain-char = alpha
+alpha           = %d65-90 / %d97-122
+num             = %d48-57
+special         = %d33 / %d35 / %d36-39 / %d42-43 / %d45 / %d47
+            / %d61 / %d63 / %d94-96 / %d123-126
     </code></pre>
 </section>
 
 <section id="49">
-    <span class="DFA-test" id="final">
-        <input class="DFA-test__input" type="text" />
+    <span class="DFA-test example-form" id="final">
+        <input style="font-family: PT Mono, monospace" class="DFA-test__input" type="text" value="mivankiv@developer.com"/>
         <span class="DFA-test__error"></span>
     </span>
 </section>
 
+<section id="50">
+    <h3>RegEx</h3>
+    <br><a href="https://blog.chromium.org/2009/02/irregexp-google-chromes-new-regexp.html">Irregexp, Google Chrome's New Regexp Implementation </a>
+    <br><a href="https://github.com/ashinn/irregex">irregex</a>
+    <br><a href="https://github.com/google/re2">re2</a>
+    <br><a href="http://emailregex.com/">Email Address Regular Expression That 99.99% Works.</a>
+    <br><a href="https://en.wikipedia.org/wiki/Thompson%27s_construction">Thompson's construction</a>
+    <br><a href="http://ivanzuzak.info/noam/webapps/fsm2regex/">FSM2Regex</a>
+    <br><a href="http://hokein.github.io/Automata.js/">Automata.js</a>
+    <h3>Контекстно вільні граматики</h3>
+    <br><a href="https://en.wikipedia.org/wiki/Augmented_Backus%E2%80%93Naur_form">Augmented Backus–Naur form</a>
+    <br><a href="https://github.com/ldthomas/apg-js2">apg-js2</a>
+    <br><a href="https://www.sitepoint.com/alternative-to-regular-expressions/">An Alternative to Regular Expressions: apg-exp</a>
+    <br><a href="https://pegjs.org/documentation">PEG.js</a>
+    <br><a href="https://nearley.js.org/docs/grammar">nearley.js</a>
+
+</section>
+
 <script src="dist/main.js"></script>
 <script>
+
+    [...document.body.querySelectorAll("input")]
+        .forEach(el => el.addEventListener("keydown", (ev)=> ev.stopPropagation()))
+
 
     let pointer = Number(window.location.hash.slice(1));
     document.body.addEventListener("keydown", (ev)=>{

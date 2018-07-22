@@ -173,3 +173,9 @@ img {
 .terminal:after {
   content: "\"";
 }
+
+.highlight {
+  background: #fbec46;
+  border-radius: 4px;
+  padding: 0 0.4rem;
+}
