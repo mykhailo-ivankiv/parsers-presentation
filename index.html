@@ -13,7 +13,7 @@
 <body>
 <section id="1">
     <h1>
-        Нахолєру мені той урівер?<br>
+        Нахолєру мені той універ?<br>
         10 років потому...
     </h1>
 </section>
@@ -152,7 +152,7 @@ $/
 
 <section  id="9">
     <a href="http://emailregex.com/">http://emailregex.com/</a>  <br/>
-    <h1>General Email Regex (RFC 5322 Official Standard)</h1>
+    <h1>General Email Regex <br> RFC 5322 Official Standard</h1>
 
     <code style="font-size: 2rem">
         (?:[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*|"(?:[\x01-\x08\x0b\x0c\x0e-\x1f\x21\x23-\x5b\x5d-\x7f]|\\[\x01-\x09\x0b\x0c\x0e-\x7f])*")@(?:(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?|\[(?:(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.){3}(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?|[a-z0-9-]*[a-z0-9]:(?:[\x01-\x08\x0b\x0c\x0e-\x1f\x21-\x5a\x53-\x7f]|\\[\x01-\x09\x0b\x0c\x0e-\x7f])+)\])
@@ -309,11 +309,31 @@ $/
 
 <section id="22">
     <h2>Ок, а як це закодити? (DFA)</h2>
-    <img src="img/DFA_table.svg" alt="">
+    <img style="height: 30rem;" src="img/DFA_table.svg" alt="">
 </section>
 
 <section id="23">
-    <h2>Код обходу дерева доволі тривіальний.</h2>
+    <h2>Початковий стан</h2>
+    <img style="height: 30rem;" src="img/DFA_table_0.svg" alt="">
+</section>
+
+<section id="24">
+    <h2>Зчитали "a" -> перехід в стан "S1"</h2>
+    <img style="height: 34rem;" src="img/DFA_table_1.svg" alt="">
+</section>
+
+<section id="25">
+    <h2>Зчитали "b" -> перехід в стан "S2"</h2>
+    <img style="height: 34rem;" src="img/DFA_table_2.svg" alt="">
+</section>
+
+<section id="26">
+    <h2>Зчитали "c" -> перехід в стан "S3"</h2>
+    <img style="height: 34rem;" src="img/DFA_table_3.svg" alt="">
+</section>
+
+<section id="27">
+    <h2>Код обходу графа доволі тривіальний.</h2>
     <pre><code style="font-size: 2rem;">
 //Матриця переходів
 const TRANSITIONS = [...];
@@ -329,12 +349,32 @@ while (input[i]) {
         </code></pre>
 </section>
 
-<section id="24">
+<section id="28">
     <h2>NFA</h2>
     <img style="height: 20rem" src="img/NFA_table.svg" alt="">
 </section>
 
-<section id="25">
+<section id="29">
+    <h2>Початковий стан</h2>
+    <img style="height: 20rem" src="img/NFA_table_0.svg" alt="">
+</section>
+
+<section id="30">
+    <h2>Символ "a"</h2>
+    <img style="height: 25rem" src="img/NFA_table_1.svg" alt="">
+</section>
+
+<section id="31">
+    <h2>Символ "b"</h2>
+    <img style="height: 25rem" src="img/NFA_table_2.svg" alt="">
+</section>
+
+<section id="32">
+    <h2>Символ "c"</h2>
+    <img style="height: 25rem" src="img/NFA_table_3.svg" alt="">
+</section>
+
+<section id="33">
     <h2>Пробуємо в бою</h2>
     <span class="DFA-test example-form example-form_inline">
         <input style="font-family: PT Mono, monospace" class="DFA-test__input" type="text" id="DFA-test" placeholder="a*b*c*"/>
@@ -381,7 +421,7 @@ while (input[i]) {
     </script>
 </section>
 
-<section id="26">
+<section id="34">
     <h2>Email regexp</h2>
     <pre style="margin-top: 2rem; font-size: 2rem;"><code>
 /^[a-zA-Z0-9.!#$%&'*+\/=?^_`{|}~-]+
@@ -391,7 +431,7 @@ while (input[i]) {
 </code></pre>
 </section>
 
-<section id="27">
+<section id="35">
     <h2>
     Очевидно, що мають бути алгоритми автоматичної конвертації <br><code>RegEx</code> в <code>DFA</code> і <code>NFA</code>.<br>
     </h2>
@@ -400,61 +440,60 @@ while (input[i]) {
     <a href="http://hokein.github.io/Automata.js/#">Automata.js</a><br>
 </section>
 
-<section id="28">
+<section id="36">
     <h2>Засада!</h2>
     <h3>
         Ми можемо сказати де саме у нас виникла помилка, та не можемо сказати, причину цієї помилки
     </h3>
 </section>
 
-<section id="29">
+<section id="37">
     <h2>Помилка, як вона є</h2>
-    <section>
-        <form class="example-form" action="">
-            <input style="font-family: PT Mono, monospace" type="text" required value="mivankiv\developer.com"/>
-            <span class="error-message">
-                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;^ <br>
-            Тутайво помилка
-            </span>
 
-        </form>
-    </section>
+    <form class="example-form" action="">
+        <input style="font-family: PT Mono, monospace" type="text" required value="mivankiv\developer.com"/>
+        <span class="error-message">
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;^ <br>
+        Тутайво помилка
+        </span>
+    </form>
 </section>
 
-<section id="30">
+<section id="38">
+    <h2>Як би хотілось</h2>
     <form class="example-form" action="">
         <input style="font-family: PT Mono, monospace"  type="text" required value="mivankiv.developer.com"/>
         <span class="error-message">Чоловіче добрий,<br> а <code>@</code> то ти ж забув вставити!</span>
     </form>
 </section>
 
-<section id="31">
-    <section>
-        <form class="example-form" action="">
-            <input style="font-family: PT Mono, monospace"  type="text" required value="google@mivankiv"/>
-            <span class="error-message">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;^<br>
-            Все класно, тільки от було б ще добре додати доменне імя. <code>.com</code> чи <code>.org</code> наприклад
-            </span>
+<section id="39">
+    <h2>Як би хотілось</h2>
+    <form class="example-form" action="">
+        <input style="font-family: PT Mono, monospace"  type="text" required value="google@mivankiv"/>
+        <span class="error-message">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;^<br>
+        Все класно, тільки от було б ще добре додати доменне імя. <code>.com</code> чи <code>.org</code> наприклад
+        </span>
 
-        </form>
-    </section>
+    </form>
+
 </section>
 
-<section id="32">
+<section id="40">
     <h2>Lexer -> Parser -> <span style="color: #999">Semantic Analysis -> Optimization -> Code gen</span></h2>
 </section>
 
-<section id="33">
+<section id="41">
     <h1>Контекстно вільні граматики</h1>
 </section>
 
-<section id="34">
+<section id="42">
     <h2>
     Контекстно-вільна граматика (скорочено КВ граматика) — формальна граматика типу 2 в ієрархії Чомскі.
     </h2>
 </section>
 
-<section id="35" style="font-size: 1.5rem">
+<section id="43" style="font-size: 1.5rem">
     <p>
         Контекстно-вільна граматика \(G\) це четвірка \((N,T,P,S)\):
     <ul>
@@ -481,11 +520,11 @@ while (input[i]) {
     </p>
 </section>
 
-<section id="36">
+<section id="44">
     <img src="img/alien_vs_predator.jpg" alt="Aliens vs predator">
 </section>
 
-<section id="37" style="position: relative;">
+<section id="45" style="position: relative;">
     <pre style="position: relative; font-size: 2rem"><code>
 Exp  -> Term <span class="terminal">+</span> Exp
       | Term
@@ -503,7 +542,7 @@ Int  -> <span class="terminal">1</span> | <span class="terminal">2</span> | <spa
     //TODO: можливо варто втулити діаграми Вірта?
 </section>
 
-<section id="38" style="position: relative;">
+<section id="46" style="position: relative;">
     <span style="top: 1.9rem; left: 3.5rem;" class="code-label">
         <span class="arrow"
         style="
@@ -605,7 +644,7 @@ Int  -> <span class="terminal">1</span> | <span class="terminal">2</span> | <spa
     //TODO: можливо варто втулити діаграми Вірта?
 </section>
 
-<section id="39">
+<section id="47">
     <h3>Перетворюємо це все в код<br></h3>
     <pre style="font-size: 1.5rem"><code>
     Exp  -> Term <span class="terminal">+</span> Exp
@@ -628,7 +667,7 @@ Int  -> <span class="terminal">1</span> | <span class="terminal">2</span> | <spa
     </code></pre>
 </section>
 
-<section id="40">
+<section id="48">
     <h3>Кожна продукція - це функція<br></h3>
     <pre style="font-size: 1.5rem"><code>
     <span class="highlight">const</span> Exp  <span class="highlight">= () => {</span>
@@ -657,7 +696,7 @@ Int  -> <span class="terminal">1</span> | <span class="terminal">2</span> | <spa
     </code></pre>
 </section>
 
-<section id="41">
+<section id="49">
 <h3>Кожен не термінальний символ - виклик функції.<br></h3>
 <pre style="font-size: 1.5rem"><code>
     const Exp  = () => {
@@ -686,7 +725,7 @@ Int  -> <span class="terminal">1</span> | <span class="terminal">2</span> | <spa
 </code></pre>
 </section>
 
-<section id="42">
+<section id="50">
     <h3>Вписуємо "&&" та "||", і розставляємо дужки<br></h3>
     <pre style="font-size: 1.5rem"><code>
     const Exp  = () => {
@@ -715,7 +754,7 @@ Int  -> <span class="terminal">1</span> | <span class="terminal">2</span> | <spa
     </code></pre>
 </section>
 
-<section id="43">
+<section id="51">
     <h3>Всі термінальні символи використовуємо через функцію match<br></h3>
     <pre style="font-size: 1.5rem"><code>
     <span class="highlight">const match = (term) => {}</span>
@@ -746,7 +785,7 @@ Int  -> <span class="terminal">1</span> | <span class="terminal">2</span> | <spa
     </code></pre>
 </section>
 
-<section id="44">
+<section id="52">
     <h3>
         Добавляємо роботу з вказівником <br>
     </h3>
@@ -783,7 +822,7 @@ Int  -> <span class="terminal">1</span> | <span class="terminal">2</span> | <spa
     </code></pre>
 </section>
 
-<section id="45">
+<section id="53">
     <h3>Реалізовуємо match, і добавляємо врапер</h3>
     <pre style="font-size: 1.2rem"><code>
 <span class="highlight">const Parser (input)</span>{
@@ -822,7 +861,7 @@ Int  -> <span class="terminal">1</span> | <span class="terminal">2</span> | <spa
     </code></pre>
 </section>
 
-<section id="46">
+<section id="54">
     <span class="DFA-test example-form" id="top-bottom-parsing">
         <input style="font-family: PT Mono, monospace" class="DFA-test__input" type="text" value="1+2*(4+4)" />
         <span style="margin: 1.3rem 0.3rem; " class="DFA-test__error"></span>
@@ -895,7 +934,7 @@ Int  -> <span class="terminal">1</span> | <span class="terminal">2</span> | <spa
 
 </section>
 
-<section id="47">
+<section id="55">
     <h2>Ok тепер email</h2>
     <p>
         <h3>
@@ -913,7 +952,7 @@ Int  -> <span class="terminal">1</span> | <span class="terminal">2</span> | <spa
 
 </section>
 
-<section id="48">
+<section id="56">
     <h2>ABNF</h2>
     <pre style="font-size: 1.5rem"><code>
 email-address   = local "@" domain
@@ -932,14 +971,14 @@ special         = %d33 / %d35 / %d36-39 / %d42-43 / %d45 / %d47
     </code></pre>
 </section>
 
-<section id="49">
+<section id="57">
     <span class="DFA-test example-form" id="final">
         <input style="font-family: PT Mono, monospace" class="DFA-test__input" type="text" value="mivankiv@developer.com"/>
         <span class="DFA-test__error"></span>
     </span>
 </section>
 
-<section id="50">
+<section id="58">
     <h3>RegEx</h3>
     <br><a href="https://blog.chromium.org/2009/02/irregexp-google-chromes-new-regexp.html">Irregexp, Google Chrome's New Regexp Implementation </a>
     <br><a href="https://github.com/ashinn/irregex">irregex</a>
