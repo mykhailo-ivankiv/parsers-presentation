@@ -1,4 +1,8 @@
+/*@import "black-theme.css";*/
+@import "white-theme.css";
+
 body {
+  background: var(--background);
   font-family: PT Serif, serif;
   margin: 0;
 }
@@ -6,7 +10,7 @@ code {
   font-family: PT Mono, monospace;
 }
 
-h1  {
+h1 {
   text-align: center;
   font-size: 4rem;
 }
@@ -33,7 +37,7 @@ img {
   object-fit: contain;
   position: relative;
   left: 30rem;
-  transform: translate(-50vw,0);
+  transform: translate(-50vw, 0);
 }
 
 .example-form {
@@ -48,7 +52,7 @@ img {
   bottom: -2rem;
   width: 100%;
   left: 8.5rem;
-  color: red;
+  color: var(--error-color);
   font-size: 2rem;
 }
 
@@ -72,7 +76,7 @@ img {
 
 .example-form input:invalid {
   outline: none !important;
-  box-shadow:none;
+  box-shadow: none;
 }
 
 .example-form input:focus {
@@ -103,19 +107,27 @@ img {
   width: 30rem;
 }
 .email-input_check:invalid {
-  color: red !important;
+  color: var(--error-color) !important;
 }
 
 .email-input:invalid,
 .email-input__error {
   box-shadow: none;
-  color: red;
+  color: var(--error-color);
 }
 
-.example-form_inline .example-form__label{ display: inline-block; }
-.example-form_inline input { width: 35rem; display: inline-block; margin: 1rem }
-.example-form_inline .example-form__hero-button { width: 9rem; margin: 1rem; }
-
+.example-form_inline .example-form__label {
+  display: inline-block;
+}
+.example-form_inline input {
+  width: 35rem;
+  display: inline-block;
+  margin: 1rem;
+}
+.example-form_inline .example-form__hero-button {
+  width: 9rem;
+  margin: 1rem;
+}
 
 .DFA-test {
   display: block;
@@ -131,7 +143,7 @@ img {
 .DFA-test__error {
   font-family: "PT Mono", monospace;
   display: block;
-  color: red;
+  color: var(--error-color);
   font-size: 3rem;
   margin: 1rem;
   top: -1.5rem;
@@ -143,7 +155,7 @@ img {
   position: absolute;
   padding: 0.5rem;
   font-size: 1rem;
-  background: #f5b111;
+  background: var(--highlight-color);
   border-radius: 3px;
 }
 .arrow {
@@ -158,24 +170,24 @@ img {
   width: 50rem;
 }
 .error-message {
-  color: red;
+  color: var(--error-color);
   font-family: PT Mono, monospace;
   font-size: 3rem;
   margin: 0.3rem;
 }
 
 .terminal {
-  color: green;
+  color: var(--terminal-color);
 }
 .terminal:before {
-  content: "\"";
+  content: '"';
 }
 .terminal:after {
-  content: "\"";
+  content: '"';
 }
 
 .highlight {
-  background: #fbec46;
+  background: var(--highlight-color);
   border-radius: 4px;
   padding: 0 0.4rem;
 }
