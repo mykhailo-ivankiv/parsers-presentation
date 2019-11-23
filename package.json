@@ -1,12 +1,10 @@
 {
   "name": "Parsers",
   "version": "1.0.0",
-  "description": "",
+  "description": "Simple and funny introduction to parsers",
   "main": "index.js",
   "dependencies": {
     "apg-exp": "^2.1.0",
-    "install": "^0.12.1",
-    "npm": "^6.2.0",
     "pegjs": "^0.10.0"
   },
   "devDependencies": {
