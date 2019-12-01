@@ -31,10 +31,10 @@ inputEl.addEventListener("input", (ev)=>{
 
         if (e.found) {
             errorEl.innerHTML = `${Array(e.location.start.offset).fill("&nbsp;").join("")}^ <br/>
-            Маттір божа! А то що таке?`
+            Нет, ну это уже слишком! Что это такое? `
         } else {
             errorEl.innerHTML = ` <br/>
-            Тут явно чогось не вистачає...`
+            Здесь явно чего-то не хватает ...`
         }
         console.log(e)
     }
