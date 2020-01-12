@@ -8,8 +8,8 @@
     "pegjs": "^0.10.0"
   },
   "devDependencies": {
-    "webpack": "^4.16.1",
-    "webpack-cli": "^3.0.8"
+    "webpack": "^4.41.5",
+    "webpack-cli": "^3.3.10"
   },
   "scripts": {
     "start": "webpack --watch",
